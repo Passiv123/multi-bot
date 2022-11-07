@@ -7,10 +7,10 @@ from discord_webhook import DiscordWebhook, DiscordEmbed
 import requests
 
 
-client_prefix = "!"
+client_prefix = "Your Prefix Here"
 
-server_pic = "https://cdn.discordapp.com/attachments/1031720681659969568/1037075956378112061/giphy.gif"
-webhook_sys = "https://discordapp.com/api/webhooks/1032798420873785355/Xeqtex19Sw5glLlmWCIAwtkJs4rQxrathW9q9gQm-9cfueqPDc6JcFW9J8oSn5MVQG6y"
+server_pic = "Your Server IMG here"
+webhook_sys = "Your Webhook here"
 
 
 class team(commands.Cog):
