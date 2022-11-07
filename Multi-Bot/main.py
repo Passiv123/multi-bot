@@ -7,15 +7,15 @@ import os
 from discord_webhook import DiscordWebhook, DiscordEmbed
 from sympy import limit
 
-Logchannel = ""
-prefix = "!"
-token = "MTAzMjc5Nzk3OTIzODc0MDAxOA.GtW1sn.tAlwCgiHt47dB4eNogE5fMVw0DuFTxdQuRWbvE"
+Logchannel = "You Log ID Channel here"
+prefix = "Your Prefix here"
+token = "Your Token here"
 
 intents = nextcord.Intents().all()
 client = commands.Bot(command_prefix=prefix, intents=intents, help_command=None)
 intents.members = True
 
-webhook_sys = "https://discordapp.com/api/webhooks/1032798420873785355/Xeqtex19Sw5glLlmWCIAwtkJs4rQxrathW9q9gQm-9cfueqPDc6JcFW9J8oSn5MVQG6y"
+webhook_sys = "Your Webhook here"
 
 Status = f"type {prefix}start | #3318"
 
