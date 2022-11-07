@@ -10,8 +10,8 @@ import requests
 
 
 client_prefix = "!"
-server_pic = "https://cdn.discordapp.com/attachments/1031720681659969568/1037075956378112061/giphy.gif"
-webhook_sys = "https://discordapp.com/api/webhooks/1032798420873785355/Xeqtex19Sw5glLlmWCIAwtkJs4rQxrathW9q9gQm-9cfueqPDc6JcFW9J8oSn5MVQG6y"
+server_pic = "Your Server img here"
+webhook_sys = "Your webhook here"
 
 reddit = praw.Reddit(client_id = "g1oeGsuOnxTRBCE9syADPw",
                     client_secret="vbJlnWtVjZJexQ5YYlhftXLAAz3o7w",
