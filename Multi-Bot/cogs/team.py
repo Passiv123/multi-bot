@@ -8,7 +8,9 @@ import requests
 
 
 client_prefix = "Your Prefix Here"
-
+server_perm1 = "Name of lowest Team Permisson"
+server_perm2 = "Name of middle Team Permission"
+server_perm3 = "Name of highst Team Permission"
 server_pic = "Your Server IMG here"
 webhook_sys = "Your Webhook here"
 
@@ -33,7 +35,7 @@ class team(commands.Cog):
         member = ctx.author
         name = member.display_name
         pfp = member.display_avatar
-        if nextcord.utils.get(ctx.guild.roles, name='P1') in ctx.author.roles:
+        if nextcord.utils.get(ctx.guild.roles, name=server_perm1) in ctx.author.roles:
             deleted = await ctx.channel.purge(limit=args + 1)
             await ctx.send("**{} messages were successfully deleted**".format(len(deleted) - 1))
             await ctx.send(f"*requested by the Stuff {ctx.author.mention}*")
@@ -79,7 +81,7 @@ class team(commands.Cog):
         name = member.display_name
         pfp = member.display_avatar
         await ctx.channel.purge(limit=1)
-        if nextcord.utils.get(ctx.guild.roles, name='P1') in ctx.author.roles:   
+        if nextcord.utils.get(ctx.guild.roles, name=server_perm1) in ctx.author.roles:   
             if user is None:
                 user = ctx.author      
             date_format = "%a, %d %b %Y %I:%M %p"
@@ -137,7 +139,7 @@ class team(commands.Cog):
         info = ctx.author
         name = info.display_name
         pfp = info.display_avatar
-        if nextcord.utils.get(ctx.guild.roles, name='P2') in ctx.author.roles:
+        if nextcord.utils.get(ctx.guild.roles, name=server_perm2) in ctx.author.roles:
             try:
                 await ctx.channel.purge(limit=1)
                 await ctx.send(f'{member.name} was kicked from the Server by {info}\nand a Dm was sendet by me as a Information for him', timestamp=ctx.message.created_at)
@@ -210,7 +212,7 @@ class team(commands.Cog):
         name = info.display_name
         pfp = info.display_avatar
         await ctx.channel.purge(limit=1)
-        if nextcord.utils.get(ctx.guild.roles, name='P2') in ctx.author.roles:
+        if nextcord.utils.get(ctx.guild.roles, name=server_perm2) in ctx.author.roles:
             try:
                 embed = nextcord.Embed(title="Admin Info", description=f"You send Successfully a Message to {member}", timestamp=ctx.message.created_at)
                 embed.add_field(name="The Message that you send :", value=f"{message}", inline=False)
@@ -263,7 +265,7 @@ class team(commands.Cog):
         name = info.display_name
         pfp = info.display_avatar
         await ctx.channel.purge(limit=1)
-        if nextcord.utils.get(ctx.guild.roles, name='P3') in ctx.author.roles:
+        if nextcord.utils.get(ctx.guild.roles, name=server_perm3) in ctx.author.roles:
             try:
                 embed = nextcord.Embed(title=f"System Information | {info}", timestamp=ctx.message.created_at)
                 embed.add_field(name=f"{member} was successfully banned by {info}", value=f"Banned for the Reason : **{reason}**", inline=False)
@@ -362,7 +364,7 @@ class team(commands.Cog):
         
         
         
-        if nextcord.utils.get(ctx.guild.roles, name='P3') in ctx.author.roles:
+        if nextcord.utils.get(ctx.guild.roles, name=server_perm3) in ctx.author.roles:
             try:
                 embed = nextcord.Embed(title=f"IP Request | {info}", color=0xF72222)
                 embed.add_field(name=f"IP :", value=f"{ip}", inline=False)
