@@ -6,9 +6,9 @@ import random
 from discord_webhook import DiscordWebhook, DiscordEmbed
 from sympy import false, limit
 
-client_prefix = "!"
+client_prefix = "Your Prefix here"
 
-webhook_sys = "https://discordapp.com/api/webhooks/1032798420873785355/Xeqtex19Sw5glLlmWCIAwtkJs4rQxrathW9q9gQm-9cfueqPDc6JcFW9J8oSn5MVQG6y"
+webhook_sys = "Your Webhook here"
 
 
 class help(commands.Cog):
